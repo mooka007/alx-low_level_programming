@@ -2,6 +2,12 @@
 #include <time.h>
 #include <stdlib.h>
 
+/**
+  * main - Determines If it number is positive, negative or zero.
+  *
+  * Return: Always e (Success)
+  */
+
 int main(void)
 {
 	int n;
