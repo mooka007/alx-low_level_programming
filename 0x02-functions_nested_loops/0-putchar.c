@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _putchar
+ * main - print _putchar
  * is written by Mooka
  * Return: 0
  */
@@ -16,6 +16,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-	return 0;
+	return (0);
 }
-
