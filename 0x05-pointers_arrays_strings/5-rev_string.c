@@ -19,10 +19,10 @@ void rev_string(char *s)
 
 	y = x - 1;
 
-	for (i = 0; i < x - 1; i++)
+	for (i = 0; i < x / 2; i++)
 	{
 		tmp = s[i];
 		s[i] = s[y];
-		s[y] = tmp;
+		s[y--] = tmp;
 	}
 }
