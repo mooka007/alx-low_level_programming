@@ -19,7 +19,7 @@ int factorial(int n)
 	{
 		return (1);
 	}
-	while (i > 1)
+	if (i > 1)
 	{
 		n = n * (i - 1);
 		i--;
