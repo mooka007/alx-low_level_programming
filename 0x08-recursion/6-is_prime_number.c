@@ -18,7 +18,7 @@ int _detects(int x, int y)
 	}
 	else
 	{
-		return (_detects(a + 1, b));
+		return (_detects(x + 1, y));
 	}
 }
 
