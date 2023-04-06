@@ -10,21 +10,19 @@ int factorial(int n)
 {
 	int i;
 
-	i = n;
-	if (n < 0 || n > 12)
-	{
-		return (0);
-	}
-	else if (n == 0 || n == 1)
+	if (n == 0)
 	{
 		return (1);
 	}
-	else 
+	else if (n < 0)
 	{
-		n = n * factorial(i - 1);
-		
+		return (-1);
 	}
-	return (n);
+	else
+	{
+		i = n * factorial(n - 1);
+	}
+	return (i);
 }
 
 
