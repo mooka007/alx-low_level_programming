@@ -19,10 +19,10 @@ int factorial(int n)
 	{
 		return (1);
 	}
-	if (i > 1)
+	else 
 	{
-		n = n * (i - 1);
-		i--;
+		n = n * factorial(i - 1);
+		
 	}
 	return (n);
 }
