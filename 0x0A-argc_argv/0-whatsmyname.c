@@ -1,15 +1,4 @@
-#include <unistd.h>
-/**
- * _putchar - function prints characters
- * owned By MoOka
- * @c: character
- * Return: character
- */
-
-void	_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "main.h"
 
 /**
  * main - program that prints its name
@@ -29,6 +18,5 @@ int	main(int argc, char *argv[])
 		++i;
 	}
 	_putchar('\n');
-	fflush(stdout);
 	return (0);
 }
