@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strlen - length of the string
- * By MoOka
- * @s: argument
+ *_strlen - return the length of a string
+ * Owned By Bwave
+ * @s: char to check
+ * Description: this will return the length of a string
  * Return: 0 is success
  */
 

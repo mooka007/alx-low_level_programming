@@ -1,27 +1,26 @@
 #include "main.h"
 
-
 /**
- * _strcat - concatenate 2 strings
- * owned By MoOka
- * @dest: 1st parameter
- * @src: 2sec parameter
- * Return: String
+ * _strcat - concat 2 string
+ * @dest:char
+ * @src:char
+ * Return:char
  */
-
 char *_strcat(char *dest, char *src)
 {
-	int i = 0;
-	int j = 0;
+	char *s = dest;
 
-	while (dest[i] != '\0')
+	while (*dest != '\0')
 	{
-		i++;
+		dest++;
 	}
-	while (src[j])
+
+	while (*src != '\0')
 	{
-		dest[i++] = src[j++];
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	*dest = '\0';
+	return (s);
 }

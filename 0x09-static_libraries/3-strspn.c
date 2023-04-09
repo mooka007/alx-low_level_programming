@@ -1,11 +1,11 @@
 #include "main.h"
+
 /**
- * _strspn - a function that gets the length of a prefix
- * owned By MoOka
- * @s: the initial
- * @accept: bytes
- * Return: the number o bytes
- */
+* _strspn - a function that gets the length of a prefix substrin
+* @s: the initial segment of
+* @accept: which consist only of bytes from
+* Return: the number of bytes
+*/
 
 unsigned int _strspn(char *s, char *accept)
 {
@@ -18,14 +18,11 @@ unsigned int _strspn(char *s, char *accept)
 			for (c = 0; accept[c] != '\0'; c++)
 			{
 				if (s[b] == accept[c])
-				{
 					a++;
-				}
 			}
-
 		}
 		else
 			return (a);
 	}
-		return (a);
+	return (a);
 }

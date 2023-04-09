@@ -1,28 +1,26 @@
 #include "main.h"
 
 /**
- * _strncat - concatenates two Strings
- * owned By MoOka
- * @dest: 1st parameter
- * @src: sec parameter
- * @n: the length
- * Return: String
+ * _strncat - concatenates two strings
+ *
+ * @src: The source of strings
+ * @dest: The destination of the string
+ * @n: The length of int
+ *
+ * Return: pointer to the resulting string dest
  */
-
 char *_strncat(char *dest, char *src, int n)
 {
-	int i = 0;
-	int j = 0;
+	int i, j;
 
-	while (dest[i])
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		i++;
+		continue;
 	}
-	while (src[j] && j < n)
+	for (j = 0; src[j] != '\0' && j < n; j++)
 	{
-		dest[i++] = src[j++];
+		dest[i + j] = src[j];
 	}
-	dest[i] = '\0';
+	dest[i + j] = '\0';
 	return (dest);
 }
-
