@@ -1,32 +1,31 @@
 #include "main.h"
-
 /**
- * _strspn - a function that gets the length of a prefix substring
- *
- * @s: the initial segment of
- *
- * @accept: which consist only of bytes from
- *
- * Return: the number of bytes
+ * _strspn - a function that gets the length of a prefix
+ * owned By MoOka
+ * @s: the initial
+ * @accept: bytes
+ * Return: the number o bytes
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int z = 0, x, y;
+	int a = 0, b, c;
 
-	for (x = 0; s[x] != '\0'; x++)
+	for (b = 0; s[b] != '\0'; b++)
 	{
-		if (s[x] != 32)
+		if (s[b] != 32)
 		{
-			for (y = 0; accept[y] != '\0'; y++)
+			for (c = 0; accept[c] != '\0'; c++)
 			{
-				if (s[x] == accept[y])
-					z++;
+				if (s[b] == accept[c])
+				{
+					a++;
+				}
 			}
+
 		}
 		else
-			return (z);
+			return (a);
 	}
-		return (z);
-
+		return (a);
 }

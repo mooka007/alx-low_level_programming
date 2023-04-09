@@ -2,32 +2,28 @@
 
 /**
  * _strstr - locates a substring
- *
- * @haystack: the longer string to search
+ * Owned By MoOka
+ * @haystack: the longer string to seach
  * @needle: the first occurrence of the substring
- *
- * Return: a pointer beg of substring or @Null if it not foound.
+ * Return: a pointer beg of substring or @NULL if its no found
  */
+
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i = 0, j = 0;
+	int i = 0;
+	int j = 0;
 
-	while (haystack[i])
+	if (needle[j] == '\0')
+		return (haystack);
+	while (haystack[i] != '\0')
 	{
-		while (needle[j] && (haystack[i] == needle[0]))
-		{
-			if (haystack[i + j] == needle[j])
-				j++;
-			else
-				break;
-		}
-		if (needle[j])
-		{
-			i++;
-			j = 0;
-		}
-		else
+		while (haystack[i + j] == needle[j] && haystack[i + j] != '\0')
+			j++;
+		if (needle[j] == '\0')
 			return (haystack + i);
+		i++;
+		j = 0;
 	}
 	return (0);
 }
+

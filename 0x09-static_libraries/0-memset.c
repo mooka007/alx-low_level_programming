@@ -1,15 +1,11 @@
 #include "main.h"
 
 /**
- * _memset - function fill the first @n bytes of the memory area pointed
- * to by @s with the constant byte @b
- *
- * @n: bytes of the memory area pointed to by @s
- *
- * @s: with the constant byte @b
- *
+ * _memset - function fill memory with a constant byte
+ * owned By MoOka
+ * @n: bytes
+ * @s: Constant Byte
  * @b: memory area pointer
- *
  * Return: a pointer to the memory area @s
  */
 
@@ -19,8 +15,8 @@ char *_memset(char *s, char b, unsigned int n)
 
 	while (i < n)
 	{
-	s[i] = b;
-	i++;
+		s[i] = b;
+		i++;
 	}
 	return (s);
 }
