@@ -26,17 +26,12 @@ int	main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		
-		 num = atoi(argv[i]);
-		
+		num = atoi(argv[i]);
 		if (num > 0)
 		{
 			sum += num;
 		}
-	}
-
+	}}
 	printf("%d\n", sum);
-
 	return (0);
-	
 }
