@@ -2,7 +2,8 @@
 #include <stdlib.h>
 /**
  * free_grid - frees a 2 dimensional grid.
- * @grid: multi-dimensional array of integers.
+ * Owned By MoOka
+ * @grid: multi array of integers.
  * @height: height of the grid.
  *
  * Return: no return
