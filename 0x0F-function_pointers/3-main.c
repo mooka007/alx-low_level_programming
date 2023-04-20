@@ -11,24 +11,28 @@
  * Return: 0.
  */
 
-int main(int argc, char *argv[])
+int main(int  argc, char *argv[])
 {
-	int (*f)(int, int);
-
+	int n1, n2;
+	char *o;
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
-	f = get_op_func(argv[2]);
-
-	if (f)
+	n1 = atoi(argv[1]);
+	o = argv[2];
+	n2 = atoi(argv[3]);
+	if (get_op_func(o) == NULL || o[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
+	if ((*o == '/' && n2 == 0) || (*o == '%' && n2 == 0))
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	printf("%d\n", get_op_func(o)(n1, n2));
 	return (0);
 }
