@@ -6,8 +6,9 @@
  * print_string - prints strings
  * Owned By MoOka
  * @separator: String to be printed between strings
- * @n: number of strings passed 
+ * @n: number of strings passed
  * @...: A variable number
+ * Return: 0.
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
