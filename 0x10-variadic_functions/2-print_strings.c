@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * print_string - prints strings
+ * print_strings - prints strings
  * Owned By MoOka
  * @separator: String to be printed between strings
  * @n: number of strings passed
