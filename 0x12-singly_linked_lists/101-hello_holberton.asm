@@ -1,17 +1,13 @@
 section .data
-    message: db 'Hello, Holberton', 0
-    format: db '%s', 10, 0
+	format db "Hello, Holberton", 10, 0
 
 section .text
-    global main
+	global main
+	extern printf
 
 main:
-    ; call printf with message and format
-    mov rdi, format
-    mov rsi, message
-    xor eax, eax
-    call printf
-
-    ; exit program
-    xor eax, eax
-    ret
+	push format
+	call printf
+	add rsp, 8
+	xor eax, eax
+	ret
