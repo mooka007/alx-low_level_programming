@@ -1,9 +1,9 @@
- lines (24 sloc)  578 Bytes
+
   
 
 #ifndef _LISTS_H_
 #define _LISTS_H_
-
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
