@@ -6,7 +6,7 @@
  * @head: the head
  * @str: string
  * Return: address
- */ 
+ */
 
 list_t *add_node(list_t **head, const char *str)
 {
@@ -20,10 +20,10 @@ list_t *add_node(list_t **head, const char *str)
 	}
 
 	mall->str = strdup(str);
-	
+
 	for (x = 0; str[x]; x++)
 		;
-	
+
 	mall->len = x;
 	mall->next = *head;
 	*head = mall;
