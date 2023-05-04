@@ -1,26 +1,4 @@
 #include "main.h"
-#include <stddef.h>
-
-
-/**
- *  *_strlen - return the length of a string
- * Owned By MoOka
- * @s: char to check
- * Description: this will return the length of a string
- * Return: 0 is success
- */
-
-int _strlen(const char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 
 /**
@@ -32,25 +10,22 @@ int _strlen(const char *s)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int result = 0;
-	unsigned int bit_value = 1;
+
+	unsigned int dec_val = 0;
 	int i;
 
-	if (b == NULL)
-	{
+	if (!b)
 		return (0);
-	}
-	for (i = _strlen(b) - 1; i >= 0; i--)
-	{
-		if (b[i] == '1')
-		{
-			result += bit_value;
-		}
-		else if (b[i] != '0')
-		{
+
+	for (i = 0; b[i] != '\0'; i++)
+
+		if (b[i]  != '0' && b[i] != '1')
 			return (0);
-		}
-		bit_value *= 2;
+	for (i = 0; b[i] != '\0'; i++)
+	{
+		dec_val *= 2;
+		if (b[i] == '1')
+			dec_val += 1;
 	}
-	return (result);
+	return (dec_val);
 }
