@@ -3,7 +3,7 @@
 /**
  * set_bit - function that sets the value of a bit to 1 at a given index
  * Owned By MoOka
- * @n: pointer 
+ * @n: pointer
  * @index: index
  * Return: If an error occurs - -1
  */
