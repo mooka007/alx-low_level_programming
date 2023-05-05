@@ -1,37 +1,30 @@
 #include "main.h"
 
-
 /**
- * binary_to_uint - function that converts a binary number
+ * binary_to_uint - Entry Point
  * Owned By MoOka
- * @b: binary
- * Return: unsigned int
+ * @b: const char
+ * Return: 0
  */
-
 unsigned int binary_to_uint(const char *b)
 {
+	unsigned int conv = 0;
+	int x = 1, i = 0;
 
-	unsigned int dec_val = 0;
-	int i;
-
-	if (!b)
+	if (b == NULL)
 		return (0);
-
-	for (i = 0; b[i] != '\0'; i++)
+	while (b[i + 1])
 	{
 		if (b[i] != '0' && b[i] != '1')
-		{
-			return (0);
-		}
+		return (0);
+		i++;
+	}
+	while (i >= 0)
+	{
+		conv += ((b[i] - '0') * x);
+		x *= 2;
+		i--;
 	}
 
-	for (i = 0; b[i] != '\0'; i++)
-	{
-		dec_val *= 2;
-		if (b[i] == '1')
-		{
-			dec_val += 1;
-		}
-	}
-	return (dec_val);
+	return (conv);
 }
