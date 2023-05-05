@@ -11,7 +11,7 @@ int get_endianness(void)
 	char *c = (char *)&b;
 
 	if (*c == 1)
-	{	
+	{
 		return (1);
 	}
 	return (0);
