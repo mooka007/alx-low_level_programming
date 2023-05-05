@@ -2,16 +2,17 @@
 
 /**
  * get_endianness - Checks the endianness.
- *
- * Return: If big-endian - 0.
- *         If little-endian - 1.
+ * Owned By MoOka
+ * Return: If big-endian - 0
  */
 int get_endianness(void)
 {
-int i = 1;
-char *c = (char *)&i;
+	int b = 1;
+	char *c = (char *)&b;
 
-if (*c == 1)
-return (1);
-return (0);
+	if (*c == 1)
+	{	
+		return (1);
+	}
+	return (0);
 }
